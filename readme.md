@@ -1,6 +1,6 @@
 # zha-cli
 
-基于React Antd 搭建的初始化项目的脚手架
+基于React Antd Typescript技术栈搭建的初始化项目的脚手架
 
 [模版仓库地址(https://github.com/zhayes/zha-cli-template)](https://github.com/zhayes/zha-cli-template);
 
@@ -36,7 +36,7 @@ npm start
 请在`sagas/common.ts`文件里修改验证码接口，登录接口以及修改密码接口。当前默认用`xxx`代替。因此第一次查看报错并不奇怪。
 
 
-`utils/util.js`里有常用的工具方法。比如`dispatchWithPromise`方法提供提供`promise`链式调用形式的`dispatch`，方便逻辑操作。虽然可能大部分数据逻辑都写在saga里面。
+`utils/util.js`里有常用的工具方法。比如`dispatchWithPromise`方法提供`promise`链式调用形式的`dispatch`，方便逻辑操作。虽然可能大部分数据逻辑都写在saga里面。
 Exp：
 ```javascript
     function submitHandle(){
@@ -55,7 +55,7 @@ Exp：
 
 #### 打包测试环境
 ```
-npm run build:dev
+npm run build:test
 ```
 
 #### 打包正式环境
