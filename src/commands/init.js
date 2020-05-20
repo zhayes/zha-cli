@@ -4,6 +4,8 @@ const download = require('download-git-repo');
 const ora = require('ora');
 
 module.exports = ()=>{
+    if(!projectConfig.project_path || !projectConfig.project_name) return console.log('未设置项目目录，不知道将资源放在哪里å');
+
     const spinner = ora('开始下载文件...').start();
     spinner.color = 'yellow';
     spinner.text = '下载文件中...';

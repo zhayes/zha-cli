@@ -1,6 +1,6 @@
 {
   "name": "zha-cli",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "",
   "main": "zha-cli.js",
   "author": "zha",
@@ -18,8 +18,9 @@
     "postcss-loader": "^3.0.0"
   },
   "keywords": [
-    "react",
-    "antd"
+    "React",
+    "Antd",
+    "TypeScript"
   ],
   "homepage": "https://github.com/zhayes/zha-cli"
 }
