@@ -53,7 +53,7 @@ Exp：
 `reducers/*`文件夹里除`index`文件外，其他新建的文件名默认为`reducer`导出对象的`key`，其对应的是全局`Redux state`的`key`。不用重复添加。Sagas文件类似。
 
 此外在`/src/utils/request.ts`文件里有`token`过期刷新的逻辑处理。请根据需要修改。
-```
+```javascript
 //token最长有效时效两个小时，单位秒
 const maxExpiresIn = 2 * 3600;
 
@@ -77,7 +77,7 @@ if (lastFetchedTime && loginInfo) {
 
 
 我使用了`connected-react-router`库，将路由与`redux`关联。因此你可以在代码里如此如下触发路由：
-```
+```javascript
 import { push } from 'connected-react-router';
 store.dispatch(push('/login'));
 ```
