@@ -1,7 +1,7 @@
 {
   "name": "zha-cli",
-  "version": "0.0.7",
-  "description": "基于React Antd TypeScript技术栈搭建的初始化项目的脚手架",
+  "version": "0.0.8",
+  "description": "初始化管理端项目的脚手架，支持vue，react两种选择。",
   "main": "zha-cli.js",
   "author": "zha",
   "license": "MIT",
@@ -19,7 +19,10 @@
   },
   "keywords": [
     "React",
+    "Vue",
+    "Vite",
     "Antd",
+    "Element-Plus",
     "TypeScript"
   ],
   "homepage": "https://github.com/zhayes/zha-cli"
