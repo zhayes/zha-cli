@@ -4,14 +4,19 @@ const download = require('download-git-repo');
 const ora = require('ora');
 
 module.exports = ()=>{
-    if(!projectConfig.project_path || !projectConfig.project_name) return console.log('未设置项目目录，不知道将资源放在哪里å');
+    if(!projectConfig.project_path || !projectConfig.project_name) return console.log('未设置项目目录，请设置！');
 
     const spinner = ora('开始下载文件...').start();
     spinner.color = 'yellow';
     spinner.text = '下载文件中...';
-    download('github:zhayes/zha-cli-template', projectConfig.project_path, function (err) {
+
+    const projectType = projectConfig.options.projectType;
+
+    const templatePath = `github:zhayes/zha-cli-${projectType==="React" ? 'react' : 'vue'}-template`
+
+    download(templatePath, projectConfig.project_path, function (err) {
         if(err){
-            pinner.fail('下载失败');
+            spinner.fail('下载失败');
             console.log(err);
         }else{
             spinner.succeed('下载完成');

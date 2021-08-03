@@ -20,15 +20,15 @@ const run = (arg)=>{
 }
 
 const promptQuestions = [
-  // {
-  //   type: "list",
-  //   name: "projectType",
-  //   message: "请选择你要创建的项目类型？",
-  //   choices: [
-  //     { name: 'React', value: 'React' },
-  //     { name: 'AlipayProgram', value: 'AlipayProgram' }
-  //   ]
-  // },
+  {
+    type: "list",
+    name: "projectType",
+    message: "请选择你要创建的项目类型？",
+    choices: [
+      { name: 'React', value: 'React' },
+      { name: 'Vue', value: 'Vue' }
+    ]
+  },
 //  {
 //     type: "list",
 //     name: "antdVersion",
@@ -114,12 +114,11 @@ program
 
     global.zhaCli_projectConfig['project_path'] = resolve(p, projectName);
 
-    // inquirer.prompt(promptQuestions).then((answer)=>{
-    //   global.zhaCli_projectConfig = answer
-    // });
-    
-    run(['init']);
-    
+    inquirer.prompt(promptQuestions).then((answer)=>{
+      global.zhaCli_projectConfig.options = answer
+
+      run(['init']);
+    });
   })
   
   program
